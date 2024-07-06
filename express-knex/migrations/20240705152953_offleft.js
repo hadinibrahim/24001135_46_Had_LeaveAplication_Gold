@@ -3,9 +3,9 @@
  * @returns { Promise<void> }
  */
 exports.up = function (knex) {
-  return knex.schema.createTable("off_left", (table) => {
+  return knex.schema.createTable("offleft", (table) => {
     table.increments();
-    table.string("off_left");
+    table.string("remain_days");
   });
 };
 
@@ -14,5 +14,5 @@ exports.up = function (knex) {
  * @returns { Promise<void> }
  */
 exports.down = function (knex) {
-  return knex.schema.dropTable("off_left");
+  return knex.schema.dropTable("offleft");
 };

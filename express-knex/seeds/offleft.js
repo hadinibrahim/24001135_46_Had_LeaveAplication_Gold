@@ -4,8 +4,8 @@
  */
 exports.seed = async function (knex) {
   // Deletes ALL existing entries
-  await knex("off_left").del();
-  await knex("off_left").insert([
+  await knex("offleft").del();
+  await knex("offleft").insert([
     { off_left: "6 days" },
     { off_left: "8 days" },
     { off_left: "12 days" }
