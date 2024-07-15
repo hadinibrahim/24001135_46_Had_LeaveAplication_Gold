@@ -1,13 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <% dayoff.forEach((objek)=>{%>
-        <p><%=objek.username%> <%=objek.date%> <%=objek.reason%> <%=objek.status%> <%=objek.tyep_name%></p>
-    <%})%>
-</body>
-</html>
+<%- include('header', {id_prof: id }) %>
+    <title>Check leaves</title>
+    </head>
+
+    <body>
+        <div class="container mt-4">
+            <h1>Off Days for <%= dayoff.length> 0 ? dayoff[0].username : "User" %></h1>
+
+            <% if (dayoff.length> 0) { %>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Reason</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% dayoff.forEach(leave=> { %>
+                            <tr>
+                                <td>
+                                    <%= leave.type_name %>
+                                </td>
+                                <td>
+                                    <%= leave.start_date.toISOString().split('T')[0] %>
+                                </td>
+                                <td>
+                                    <%= leave.end_date.toISOString().split('T')[0] %>
+                                </td>
+                                <td>
+                                    <%= leave.reason %>
+                                </td>
+                            </tr>
+                            <% }) %>
+                    </tbody>
+                </table>
+                <% } else { %>
+                    <p>No leave records found.</p>
+                    <% } %>
+
+                        <a href="/dashboard" class="btn btn-primary">Back to Dashboard</a>
+        </div>
+
+        <%- include('footer') %>

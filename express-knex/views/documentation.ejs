@@ -1,0 +1,99 @@
+<%- include('header', { id_prof: id }) %>
+    <title>Documentation</title>
+
+        <h2>API Documentation</h2>
+   
+
+    <div class="container">
+        <main>
+            <section id="request" class="doc-section">
+                <h2>POST /register</h2>
+                <p>Buat akun baru</p>
+                <h3>Request</h3>
+                <img src="/public/images/post_register.png">
+            </section><br>
+
+            <section id="response" class="doc-section">
+                <h2>GET /register</h2>
+                <p>Tampilan register</p>
+                <h3>Response</h3>
+                <img src="/public/images/get_register.png">
+            </section>
+
+            <section id="request" class="doc-section">
+                <h2>POST /login</h2>
+                <p>Masuk akun</p>
+                <h3>Request</h3>
+                <img src="/public/images/post_login.png">
+            </section><br>
+
+            <section id="response" class="doc-section">
+                <h2>GET /login</h2>
+                <p>Tampilan login</p>
+                <h3>Response</h3>
+                <img src="/public/images/get_login.png">
+            </section>
+
+            <section id="response" class="doc-section">
+                <h2>GET /profile/:id</h2>
+                <p>Tampilan profile</p>
+                <h3>Response</h3>
+                <img src="/public/images/get_profile.png">
+            </section>
+            
+            <section id="response" class="doc-section">
+                <h2>PATCH /profile/edit/:id</h2>
+                <p>ubah edit profile</p>
+                <h3>Request</h3>
+                <img src="/public/images/patch_profile.png">
+            </section>
+
+            <section id="response" class="doc-section">
+                <h2>GET /profile/edit/:id</h2>
+                <p>Tampilan edit profile</p>
+                <h3>Response</h3>
+                <img src="/public/images/get_profileUpdate.png">
+            </section>
+
+            <section id="request" class="doc-section">
+                <h2>DELETE /profile/:id</h2>
+                <p>Tampilan login</p>
+                <h3>Response</h3>
+                <img src="/public/images/delete_profile.png">
+            </section><br>
+
+            <section id="response" class="doc-section">
+                <h3>Response</h3>
+                <img src="/public/images/deleteProf.png">
+            </section>
+
+            <section id="request" class="doc-section">
+                <h2>DELETE /profile/:id</h2>
+                <p>Tampilan login</p>
+                <h3>Response</h3>
+                <img src="/public/images/deleteProf.png">
+            </section>
+
+            <section id="request" class="doc-section">
+                <h2>POST /apply_leave/:id</h2>
+                <p>Pengajuan cuti</p>
+                <h3>Request</h3>
+                <img src="/public/images/input_dayoff.png">
+            </section>
+
+            <section id="response" class="doc-section">
+                <h2>GET /dayoff/:id</h2>
+                <p>Pengajuan cuti</p>
+                <h3>Response</h3>
+                <img src="/public/images/get_check_leave.png">
+            </section>
+
+            <section id="response" class="doc-section">
+                <h2>GET /apply_leave/:id</h2>
+                <p>Tampilan login</p>
+                <h3>Response</h3>
+                <img src="/public/images/get_dayoff.png">
+            </section>
+        </main>
+    </div>
+<%- include('footer') %>

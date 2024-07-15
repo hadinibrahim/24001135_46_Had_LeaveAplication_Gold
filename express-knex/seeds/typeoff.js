@@ -4,8 +4,8 @@
  */
 exports.seed = async function (knex) {
   // Deletes ALL existing entries
-  await knex("offtype").del();
-  await knex("offtype").insert([
+  await knex("typeoff").del();
+  await knex("typeoff").insert([
     { type_name: "Cuti sakit" },
     { type_name: "Cuti tahunan" },
     { type_name: "Cuti menikah" },
